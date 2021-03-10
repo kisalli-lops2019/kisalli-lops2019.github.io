@@ -624,3 +624,32 @@ Keksi tikkataulusta tehtävä jonka jonka vastauksena on todennäköisyys $0{,}2
 dropdown='
 Esimerkiksi saadaan 10 tai 1.
 ' %}
+
+## Tehtäväsarja 2
+
+{% include box.html  
+type="exercise"
+header="Tehtävä" 
+content='
+Sisältö
+1. Alatehtävä.
+1. Alatehtävä.
+dropdown='
+Vastauksen sisältö.
+' %}
+
+## Tehtäväsarja 3
+
+{% include box.html  
+type="exercise"
+header="Tehtävä" 
+content='
+Sisältö
+1. Alatehtävä.
+1. Alatehtävä.
+dropdown='
+Vastauksen sisältö.
+' %}
+
+##Itsearviointitehtävä
+Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä itsearviointitesti [opetus.tv:n polku-palvelussa](https://polku.opetus.tv/). Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.

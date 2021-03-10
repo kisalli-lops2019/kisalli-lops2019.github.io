@@ -194,34 +194,6 @@ dropdown="
 | **Yhteensä**	| 6		| 100 %	|
 " %}
 
-
-Summafrekvenssi ja suhteellinen summafrekvenssi???	
-
-{% include box.html  
-type="exercise"
-header="Havaintoyksikkö ja havaintoarvo" 
-content="
-Mikä seuraavissa tapauksissa on havaintoyksikkö ja mikä on havaintoarvo? Huomaa, että kysymykseen ei ole olemassa vain yhtä oikeata vastausta.
-1. Puolueiden kannatusmittaus.
-1. Kuukausittainen kuluttajahintaindeksi.
-1. Viime vuonna tapahtuneet liikenneonnettomuudet.
-1. Suomen kuntien väkiluku. 
-" 
-dropdown="
-1. Havaintoyksikkö: kyselyyn osallistuja henkilö. Havaintoarvo: puolue.
-1.  Havaintoyksikkö: kuukausi (ja vuosi). Havaintoarvo: indeksin arvo.
-1.   Havaintoyksikkö: yksittäinen onnettomuus. Havaintoarvo: loukkaantuneiden lukumäärä.
-1.  Havaintoyksikkö: kunta. Havaintoarvo: väkiluku.
-" %}
-
-{% include box.html  
-type="exercise"
-header="Frekvenssi ja suhteellinen frenvenssi" 
-content="
-Tilastokeskuksen [Paavo-tietokannasta](https://www.stat.fi/tup/paavo/index.html) löytyy tietoa postinumeroittain. Tutkitaan 18 vuotta täyttäneiden koulutusastetta. Etsi kahden [postinumeroalueen koulutusastetiedot](http://pxnet2.stat.fi/PXWeb/pxweb/fi/Postinumeroalueittainen\_avoin\_tieto/Postinumeroalueittainen\_avoin\_tieto\_\_2020/paavo\_pxt\_12ez.px/) (perusaste, ylioppilastutkinto, ammatillinen tutkinto, alempi korkeakoulututkinto, ylempi korkeakoulututkinto) kaikilta 18 vuotta täyttäneiltä ja laske suhteelliset frekvenssit.
-" 
-dropdown="" %}
-
 ## Keskiluvut
 
 Aineistoja tutkittaessa mielenkiinnon kohteena on usein löytää aineiston "tyypillisin" tai "keskimmäisin" tapaus. Tätä kuvaamaan käytetään erilaisia keskilukuja. Niiden määrittämisen mielekkyys riippuu havaintoarvojen luonteesta, eli siitä mitä on mielekästä kutsua "tyypilliseksi" kyseisessä aineistossa.
@@ -418,9 +390,187 @@ Keksi esimerkkejä havaintoarvioista, joille voit soveltaa
 1. moodia, mediaania ja keskiarvoa?
 " %}
 
+## Keskihajonta
+
+Eri havaintoarvojen joukoilla voi olla sama keskiarvo, esimerkiksi silloin, kun joukot ovat 5, 7, 9 ja 7, 7, 7. Keskiarvo ei siis kerro, miten  havaintoarvot ovat jakautuneet. Tutustumme tässä luvussa *keskihajontaan*., joka  kuvaa havaintoarvojen jakautumista keskiarvon ympärille. Tässä luvussa ajattelemme, että meillä on käytössä välimatka-asteikko, jolloin voimme laskea havaintoarvojen erotuksia.
+
+{% include box.html  
+type="definition"
+header="Vaihteluväli" 
+content="
+Pienin ja suurin havaintoarvo määräävät *vaihteluvälin*. Vaihteluvälin pituus on suurimman ja pienimmän havaintoarvon erotus.                  
+" %}
+
+Alla olevassa taulukossa on Tuulian ja Lukan koearvosanoja. Molemmilla on sama keskiarvo 8, sama vaihteluväli  $[6, 10]$ ja sama vaihteluvälin pituus $10-6=4$, mutta siitä huolimatta näyttää siltä, että Tuulian arvosanoissa on enemmän vaihtelua. 
+
+
+| **Arvosana**		| 4	| 5 | 6 | 7 | 8	| 9	| 10	|
+| **Tuulia (lkm %)**| 0 | 0 | 3	| 0	| 1	| 0 | 3		|
+| **Luka (lkm %)**	| 0	| 0	| 1	| 1	| 3	| 1	| 1		|
+
+{% include box.html  
+type="definition"
+header="Keskihajonta" 
+content="
+*Keskihajonta* on
+$$
+\sqrt{\frac1n \sum_{j=1}^n (x_i - \bar x)^2} ~,
+$$
+missä $x_1, \ldots, x_n$ ovat havaintoarvot ja $\bar x$ on niiden keskiarvo. Keskihajontaa merkitään usein kirjaimella $\sigma$.              
+" %}	
+
+Jatketaan Tuulian ja Lukan koearvosanojoen analysointia ja lasketaan Tuulian ja Lukan koearvosanojen keskihajonta, yllä olevan taulukon tiedoilla. Molempien koearvosanojen keskiarvo on 8.  Tuulian koearvosanojen keskihajonta on
+		
+$$
+\begin{split}
+	&\sqrt{\frac{1}{7}\left( (6-8)^2+ (6-8)^2 +(6-8)^2 + (8-8)^2 + (10-8)^2+ (10-8)^2+ (10-8)^2\right)}\\
+	&= \sqrt{\frac{1}{7}\left(4+4+4+0+4+4+4\right)} \approx 1{,}9
+\end{split}
+$$
+ja Lukan koearvosanojen keskihajonta on
+$$
+\begin{split}
+	&\sqrt{\frac{1}{7}\left((6-8)^2+ (7-8)^2 +(8-8)^2 + (8-8)^2 + (8-8)^2+ (9-8)^2+ (10-8)^2\right)}\\
+	&= \sqrt{\frac{1}{7}\left(4+1+0+0+0+1+4\right)} \approx 1{,}2. 
+\end{split}
+$$
+Kuten aiemmin jo huomattiin, Tuulian koearvosanoissa on enemmän vaihtelua kuin Lukan.  
+					
 {% include box.html  
 type="exercise"
-header="Asteikot" 
+header="Tunnusluvut teknisen apuvälineen avulla" 
+content="
+Tilastokeskuksen sivuilta osoitteesta [http://www.tilastokeskus.fi/til/lop/index.html] löyttyy taulukko lukion opiskelijamääristä maakunnittain. Lataa aineisto ja laske siitä tietokoneohjelmalla moodi, mediaani, keskiarvo ja keskihajonta.
+" %}
+
+{% include box.html  
+type="exercise"
+header="Keskihajonta" 
+content="
+Jos kahden joukon havaintoarvoilla on sama keskiarvo ja sama keskihajonta, niin ovatko joukot välttämättä samoja? 
+" %}
+
+## Diagrammit
+
+Diagrammeilla voidaan havainnollistaa ja konkretisoida havaintoaineistoa. Pylväsdiagrammi sopii esimerkiksi absoluuttisten määrien esittämiseen, kun taas ympyrädiagrammi havainnollistaa hyvin suhteita. Diagrammin tyyppiä valitessa tulee kiinnittää erityistä huomiota siihen, että diagrammi havainnollistaa haluttua asiaa.
+
+Alla olevissa diagrammeissa on esitetty lapsiperheiden kokonaismäärä ja suhteellinen osuus:
+
+![Pylväsdiagrammi](/images/pylvasdiagrammi-lapsiperheet.png "Pylväsdiagrammi")
+![Ympyrädiagrammi](/images/ympyradiagrammi-lapsiperheet.png "Ympyrädiagrammi")    
+
+Ajatellaan että havaintoarvot noudattavat järjestysasteikkoa, ja järjestetään havointoarvot nousevaan järjestykseen. Tällöin voimme laske summafrekvenssin ja suhteellisen summafrekvenssin.
+
+{% include box.html  
+type="definition"
+header="Summafrekvenssi ja suhteellinen summafrekvenssi" 
+content="
+Olkoot $x_1, \ldots, x_k$ havaintoarvot, jotka ovat suuruusjärjestyksessä. Olkoon $f_i$ havaintoarvoa $x_i$ vastaava frekvenssi, sekä $f_i\%$ havaintoarvoa $x_i$ vastaava suhteellinen frekvenssi. Tällöin  *summafrekvenssi* on funktio
+
+$$
+S_j =\sum_{i=1}^j f_i
+$$ 
+ja *suhteellinen summafrekvenssi* on funktio
+$$
+\Sa_j=\sum_{i=1}^j f_i\%.
+$$
+Molemmissa funktioissa $j \in \{1, 2, 3, \ldots, k\}$.
+" %}
+
+Huomaa, että $S_k$ antaa havaintojen kokonaismäärän ja $\Sa_k=1$. Funktio $S$ on kasvava ja se saa korkeintaan $k$ eri arvoa. Huomaa, että summafrekvenssi voidaan määritäää myös rekurssivisesti
+$$
+S_{j+1} = \sum_{i=1}^{j+1} f_i = \sum_{i=1}^{j} f_i + f_{j+1} = S_j + f_{j+1}. 
+$$
+
+Vastaavasti suhteellinen summafrekvenssi on 
+kasvava funktio, joka saa korkeintaan $k$ eri arvoa. Myös suhteellisen summafrekvenssin voi  samalla tavalla esittää rekursiivisesti.  
+
+Määritellään summafrekvenssi ja suhteellinen summafrekvenssi  lapsiperhe esimerkissä. Lasketaan ensin summafrekvenssin ja suhteellisen summafrekvenssin arvot eri pisteissä. Huomaa, että suhteellinen summafrekvenssi pyöristyy kahden desimaalin tarkkuudella arvoon $100{,}00\%$ alkaen muuttujan arvosta 10. Piirretään tämän jälkeen niiden kuvaajat.
+ 
+| $x_j$	|	$S_j$ 			| $Sa_j$ 			| 
+| ---	| ---				| ---				|
+| 1		| $S_1 =  241,709$ 	| $Sa_1 = 42{,}7 %$	|
+| 2		| $S_2 = S_1 +   220,116 = 461,825$	| $Sa_2 = Sa_1 + 38{,}9=81,6  %$ |
+| 3		| $S_3 = S_2 +   75,326 = 537, 151$	| $Sa_3 = Sa_2 + 13{,}3= 94,9  %$ |
+| 4		| $S_4 = S_3 + 18,409 = 555,560$	| $Sa_4 = Sa_3 + 3{,}3= 98,2 %$ |
+| 5	| $S_5=  551,053$	| $Sa_5 = 99,2 %$ |
+| 6	| $S_6 =    563,342$	| $Sa_6=99{,}6 %$ |
+| 7	| $S_7=  564,577$	| $Sa_7=99{,}8 %$ |
+| 8	| $S_8=  565,328$	| $Sa_8=99{,}9 %$ |
+| 9	| $S_9=  565,804$	| $Sa_9=99{,}98 %$ |
+| 10	| $S_{10}=  566,066$	| $Sa_{10} = 100,00 %$ |
+| 11	| $S_{11}=   566,183$	| $Sa_{11}=100,00 %$ |
+| 12	| $S_{12}=   566,224$	| $Sa_{12}=100,00 %$ |
+| 13	| $S_{13}=   566,236$	| $Sa_{13}=100,00 %$ |
+| 14	| $S_{14}=   566,239$	|  $Sa_{14}=100,00 %$ |
+| 15	| $S_{15}=   566,239$	| $Sa_{15}=100,00 %$ |
+| 16	| $S_{16}=   566,242$	|$Sa_{16}=100,00 %$ |
+
+**Taulukko: apsiperheiden lukumäärä alle 18-vuotiaiden lasten määrän mukaan: summafrekvenssi ja suhteellinen summafrekvenssi.**
+
+![Summafrekvenssin kuvaaja](/images/summaf.png "Summafrekvenssin kuvaaja")
+![Suhteellisen summafrekvenssin kuvaaja](/images/suht-summaf.png "Suhteellisen summafrekvenssin kuvaaja")    
+
+Suhteellisen summafrekvenssin kuvaajasta voidaan graafisesti määrittää mediaani. Esimerkkikuvaajassa mediaani on 2, sillä kuvaaja saavuttaa 50\% arvon kohdassa 2. Samanlainen päättely voidaan tehdä myös muille prosenttiosuuksille.  Esimerkiksi  arvo 25\% saavuteen muuttujan arvolla 1 ja 95\% muuttujan arvolla 4. Prosenttiosuuksista saamme vastauksen kysymykseen millä havaintoarvolla ja sitä pienemmillä havaintoarvoilla on annettu prosenttiosuus havaintoyksiköistä.     
+
+{% include box.html  
+type="exercise"
+header="Diagrammit" 
+content="
+Tutustu ohjelmistosi eri diagrammeihin. Analysoi eri diagrammityyppien hyviä ja huonoja puolia.
+1. Mitkä niistä sopivat aiemman Esimerkin 1 pihalinnuista havainnollistamiseen?
+1. Mitkä niistä sopivat lapsiperheiden frekvenssien ja suhteellisten frekvenssien havainnollistamiseen?
+" %}    
+
+{% include box.html  
+type="exercise"
+header="Luokittelu ja suhteellinen frekvenssi" 
+content='
+Suomessa on yhteensä 311 kuntaa. Asukasluvultaan suurin on Helsinki \(635181 asukasta\). Manner-Suomen pienin kunta on Luhanka \(756 asukasta\) ja Ahvenanmaan pienin kunta on Sottunga \(96 asukasta\). Melkein kaikissa kunnissa on eri määrä asukkaita, joten havaintoarvot täytyy luokitella ennen frekvenssien laskemista.
+
+[Kuntaliiton verkkosivujen](https://www.kuntaliitto.fi/vaestotietoja-kunnittain) \(luettu 21.10.2020\) kuvassa kunnat, eli havaintoyksiköt, on luokiteltu asukasmäärän, eli havaintoarvon, mukaan viiteen eri luokkaan.
+
+![Kuntaliiton verkkosivujen kuva Suomen kunnista](images/kunta.png "Suomen kunnat")
+
+1. Miten asukasmäärät on luokiteltu?
+1. Mitä tarkoittavat kuvan luvut 21, 34, 43, 80 ja 133?
+1. Laske luokkien suhteelliset frekvenssit.
+' 
+extra="
+1. alle 5000 asukasta, 5000–10000 asukasta, 10001–20000 asukasta, 20001–50000 asukasta ja yli 50000 asukasta.
+1. Luokkien frekvenssit.	
+" %}
+
+## Tehtäväsarja 2
+
+{% include box.html  
+type="exercise"
+header="Frekvenssi" 
+content="
+Mikä seuraavissa tapauksissa on havaintoyksikkö ja mikä on havaintoarvo? Huomaa, että kysymykseen ei ole olemassa vain yhtä oikeata vastausta.
+1. Puolueiden kannatusmittaus.
+1. Kuukausittainen kuluttajahintaindeksi.
+1. Viime vuonna tapahtuneet liikenneonnettomuudet.
+1. Suomen kuntien väkiluku. 
+" 
+dropdown="
+1. Havaintoyksikkö: kyselyyn osallistuja henkilö. Havaintoarvo: puolue.
+1.  Havaintoyksikkö: kuukausi (ja vuosi). Havaintoarvo: indeksin arvo.
+1.   Havaintoyksikkö: yksittäinen onnettomuus. Havaintoarvo: loukkaantuneiden lukumäärä.
+1.  Havaintoyksikkö: kunta. Havaintoarvo: väkiluku.
+" %}
+
+{% include box.html  
+type="exercise"
+header="Frekvenssi" 
+content="
+Tilastokeskuksen [Paavo-tietokannasta](https://www.stat.fi/tup/paavo/index.html) löytyy tietoa postinumeroittain. Tutkitaan 18 vuotta täyttäneiden koulutusastetta. Etsi kahden [postinumeroalueen koulutusastetiedot](http://pxnet2.stat.fi/PXWeb/pxweb/fi/Postinumeroalueittainen\_avoin\_tieto/Postinumeroalueittainen\_avoin\_tieto\_\_2020/paavo\_pxt\_12ez.px/) (perusaste, ylioppilastutkinto, ammatillinen tutkinto, alempi korkeakoulututkinto, ylempi korkeakoulututkinto) kaikilta 18 vuotta täyttäneiltä ja laske suhteelliset frekvenssit.
+" 
+dropdown="" %}
+
+{% include box.html  
+type="exercise"
+header="Keskiluvut" 
 content="
 Tutki [THL:n ekaluokkalaisen vanhemmille tarkoitettua esitietolomaketta](https://www.thl.fi/attachments/kasvunkumppanit/kouluterveydenhuolto/THL\_1lk\_vanhemmille\_FI\_lomake.pdf). Tehtävässä voidaan ajatella että jokainen ekaluokkalainen on havaintoyksikkö ja mikä tahansa kysymyksen vastaus voidaan valita havaintoarvoksi. Etsi kysymys, jonka vastaukset
 1. noudattavat luokitteluasteikkoa mutta eivät järjestysasteikkoa,
@@ -435,7 +585,7 @@ dropdown='
 
 {% include box.html  
 type="exercise"
-header="Eri asteikoita" 
+header="Keskiluvut" 
 content="
 Mitkä seuraavista noudattavat järjestysasteikkoa, välimatka-asteikkoa tai ei kumpaakaan?
 1. Vuorokauden keskilämpötila.
@@ -502,7 +652,7 @@ dropdown='
 
 {% include box.html  
 type="exercise"
-header="Keskiarvo" 
+header="Keskiluvut" 
 content="
 Perheessä on kaksi tyttöä ja kaksospojat. Isä laski, että perheen lasten ikien keskiarvo on 12 vuotta. Perheen tytöt ovat 7- ja 15-vuotiaita. Kuinka vanhoja ovat perheen pojat?
 " %}
@@ -539,69 +689,9 @@ dropdown='
 Koska moodi on 8, niin valituista luvuista 2 on 8. Koska mediaani on 7,5, niin yhden luvun tulee olla pienempi kuin 8 eli 7. Valittuja lukuja voivat siten olla joko 7, 8, 8, ja 9 tai 7, 8, 8 ja 10.
 ' %}
 
-## Keskihajonta
-
-Eri havaintoarvojen joukoilla voi olla sama keskiarvo, esimerkiksi silloin, kun joukot ovat 5, 7, 9 ja 7, 7, 7. Keskiarvo ei siis kerro, miten  havaintoarvot ovat jakautuneet. Tutustumme tässä luvussa *keskihajontaan*., joka  kuvaa havaintoarvojen jakautumista keskiarvon ympärille. Tässä luvussa ajattelemme, että meillä on käytössä välimatka-asteikko, jolloin voimme laskea havaintoarvojen erotuksia.
-
-{% include box.html  
-type="definition"
-header="Vaihteluväli" 
-content="
-Pienin ja suurin havaintoarvo määräävät *vaihteluvälin*. Vaihteluvälin pituus on suurimman ja pienimmän havaintoarvon erotus.                  
-" %}
-
-Alla olevassa taulukossa on Tuulian ja Lukan koearvosanoja. Molemmilla on sama keskiarvo 8, sama vaihteluväli  $[6, 10]$ ja sama vaihteluvälin pituus $10-6=4$, mutta siitä huolimatta näyttää siltä, että Tuulian arvosanoissa on enemmän vaihtelua. 
-
-
-| **Arvosana**		| 4	| 5 | 6 | 7 | 8	| 9	| 10	|
-| **Tuulia (lkm %)**| 0 | 0 | 3	| 0	| 1	| 0 | 3		|
-| **Luka (lkm %)**	| 0	| 0	| 1	| 1	| 3	| 1	| 1		|
-
-{% include box.html  
-type="definition"
-header="Keskihajonta" 
-content="
-*Keskihajonta* on
-$$
-\sqrt{\frac1n \sum_{j=1}^n (x_i - \bar x)^2} ~,
-$$
-missä $x_1, \ldots, x_n$ ovat havaintoarvot ja $\bar x$ on niiden keskiarvo. Keskihajontaa merkitään usein kirjaimella $\sigma$.              
-" %}	
-
-Jatketaan Tuulian ja Lukan koearvosanojoen analysointia ja lasketaan Tuulian ja Lukan koearvosanojen keskihajonta, yllä olevan taulukon tiedoilla. Molempien koearvosanojen keskiarvo on 8.  Tuulian koearvosanojen keskihajonta on
-		
-$$
-\begin{split}
-	&\sqrt{\frac{1}{7}\left( (6-8)^2+ (6-8)^2 +(6-8)^2 + (8-8)^2 + (10-8)^2+ (10-8)^2+ (10-8)^2\right)}\\
-	&= \sqrt{\frac{1}{7}\left(4+4+4+0+4+4+4\right)} \approx 1{,}9
-\end{split}
-$$
-ja Lukan koearvosanojen keskihajonta on
-$$
-\begin{split}
-	&\sqrt{\frac{1}{7}\left((6-8)^2+ (7-8)^2 +(8-8)^2 + (8-8)^2 + (8-8)^2+ (9-8)^2+ (10-8)^2\right)}\\
-	&= \sqrt{\frac{1}{7}\left(4+1+0+0+0+1+4\right)} \approx 1{,}2. 
-\end{split}
-$$
-Kuten aiemmin jo huomattiin, Tuulian koearvosanoissa on enemmän vaihtelua kuin Lukan.  
-					
-{% include box.html  
-type="exercise"
-header="Tunnusluvut teknisen apuvälineen avulla" 
-content="
-Tilastokeskuksen sivuilta osoitteesta [http://www.tilastokeskus.fi/til/lop/index.html] löyttyy taulukko lukion opiskelijamääristä maakunnittain. Lataa aineisto ja laske siitä tietokoneohjelmalla moodi, mediaani, keskiarvo ja keskihajonta.
-" %}
-
 {% include box.html  
 type="exercise"
 header="Keskihajonta" 
-content="
-Jos kahden joukon havaintoarvoilla on sama keskiarvo ja sama keskihajonta, niin ovatko joukot välttämättä samoja? 
-" %}
-
-{% include box.html  
-type="exercise"
-header="Keskiluvut ja keskihajonta" 
 content="
 Lataa [Tilastokeskuksen sivulta taulukko](https://www.stat.fi/tup/alue/kuntienavainluvut.html), jossa on kaikkien Suomen kuntien asukasluku. Laske aineistosta moodi, mediaani ja keskiarvo, sekä keskihajonta.
 " %}
@@ -630,28 +720,10 @@ Onko olemassa sellaista kolmialkioista joukkoa $\{a, b, c\}$ reaalilukuja, jonka
 dropdown='
 Valitaan joukko $\{-x, 0, x\}$, missä $x>0$. Nyt keskiarvo on nolla, ja keskihajonta on $\sqrt{\frac13\cdot 2|x|^2}$. Ratkaisemalla yhtälö $\sqrt{\frac13\cdot 2|x|^2}=\sqrt{2}$ löydetään sopiva $x$.
 ' %}
-
-## Diagrammit
-
-Diagrammeilla voidaan havainnollistaa ja konkretisoida havaintoaineistoja. Pylväsdiagrammi sopii esimerkiksi absoluuttisten määrien esittämiseen, kun taas ympyrädiagrammi havainnollistaa hyvin suhteita. Diagrammin tyyppiä valitessa tulee kiinnittää erityistä huomiota siihen, että diagrammi havainnollistaa haluttua asiaa. 
-
-Alla olevissa diagrammeissa on esitetty lapsiperheiden kokonaismäärä ja suhteellinen osuus:
-
-![Pylväsdiagrammi](/images/pylvasdiagrammi-lapsiperheet.png "Pylväsdiagrammi")
-![Ympyrädiagrammi](/images/ympyradiagrammi-lapsiperheet.png "Ympyrädiagrammi")    
-
+             
 {% include box.html  
 type="exercise"
 header="Diagrammit" 
-content="
-Tutustu ohjelmistosi eri diagrammeihin. Analysoi eri diagrammityyppien hyviä ja huonoja puolia.
-1. Mitkä niistä sopivat aiemman Esimerkin 1 pihalinnuista havainnollistamiseen?
-1. Mitkä niistä sopivat lapsiperheiden frekvenssien ja suhteellisten frekvenssien havainnollistamiseen?
-" %}    
-
-{% include box.html  
-type="exercise"
-header="Diagrammin piirtäminen" 
 content="
 [Tilastokeskuksen sivulta](https://www.stat.fi/tup/alue/kuntienavainluvut.html) löytyy maakuntien asukasluvut. (Avainluvut pylväskuvioina maakunnittain.) Luokittele maakunnat asukasluvun mukaan luokkiin  $[0, 50 000)$, $[50000, 100000)$, $[100000, 150000)$, $[150000, 200000)$, $[200000, 400000)$ ja yli 4000000 asukasta. 
 1. Laske luokkien suhteelliset frekvenssit.
@@ -661,7 +733,7 @@ content="
 
 {% include box.html  
 type="exercise"
-header="Summafrekvenssi" 
+header="Diagrammit" 
 content="
 Sivulta [https://asuntojen.hintatiedot.fi] löytyy tietoa toteutuneista asuntokaupoista. Hae tieto Helsingin Kalliossa (kaupunki: Helsinki, kaupunginosa: Kallio) myydyistä yksiöistä. Tutkitaan neliöhintoja. Luokittele neliöhinnat 500 euron pituisiin luokkiin. Laske luokille suhteelliset frekvenssin ja piirrä summafrekvenssin kuvaaja. Päättele summafrekvenssin kuvaajasta seuraavat asiat:
 1. 90\% yksiöistä on tätä neliöhintaa edullisempia.
@@ -670,7 +742,7 @@ Sivulta [https://asuntojen.hintatiedot.fi] löytyy tietoa toteutuneista asuntoka
 
 {% include box.html  
 type="exercise"
-header="Diagrammin tulkinta" 
+header="Diagrammit" 
 content='
 [Tilastokeskuksen sivua](http://www.tilastokeskus.fi/til/ksyyt/2018/ksyyt$\_$2018$\_$2019-12-16$\_$kat$\_$001$\_$fi.html) on esitetty suomalaisten kuolemansyiden rakenne. 
 
@@ -682,5 +754,19 @@ Arvioi diagrammin perusteella minkäikäisten ihmisten todennäköisin kuolinsyy
 1. kasvaimet.
 1. alkoholiperäiset syyt.
 ' %}      
-             
-					
+				
+## Tehtäväsarja 3
+
+{% include box.html  
+type="exercise"
+header="Tehtävä" 
+content='
+Sisältö
+1. Alatehtävä.
+1. Alatehtävä.
+dropdown='
+Vastauksen sisältö.
+' %}
+
+##Itsearviointitehtävä
+Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä itsearviointitesti [opetus.tv:n polku-palvelussa](https://polku.opetus.tv/). Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
