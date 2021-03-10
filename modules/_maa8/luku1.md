@@ -769,5 +769,5 @@ dropdown='
 Vastauksen sisältö.
 ' %}
 
-##Itsearviointitehtävä
+## Itsearviointitehtävä
 Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä itsearviointitesti [opetus.tv:n polku-palvelussa](https://polku.opetus.tv/). Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.

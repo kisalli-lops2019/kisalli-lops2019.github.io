@@ -184,8 +184,47 @@ $$
    0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 =0{,}3^5 \approx 0{,}00243\ \% .
 $$
 Voimme seuraavaksi muotoilla yleisen lausekkeen toistokokeen onnistumistodennäköisyydelle.
-					
-					
+
+{% include box.html  
+type="theorem"
+header="" 
+content="
+Jos toistokokeen yhden kokeen onnistumistodennäköisyys on $p \in [0,1]$ ja toistokoe suoritetaan $n \ge 1$ kertaa, niin todennäköisyys, että koe onnistuu $k \in \{ 0,1,\dots, n \}$ kertaa, on
+$$
+\displaystyle\binom{n}{k}\, p^k (1-p)^{n-k}.
+$$
+" %}
+
+Varmista ennen kuin käytät yllä olevaa teoreemaa, että toistettavat kokeet ovat riippumattomia ja selvitä muuttujien $n$ (toistojen lukumäärä), $k$ (onnistumisten lukumäärä) ja $p$ (yhden kokeen onnistumistodennäköisyys) arvot.		
+
+{% include box.html  
+type="exercise"
+header="Toistokoe nopalla" 
+content='
+Tavallista noppaa heitetään 7 kertaa. Millä todennäköisyydellä saadaan täsmälleen kaksi kertaa silmäluku 5 tai 6?
+'
+dropdown='
+Kyseessä on toistokoe, sillä aikaisempi nopan heitto ei vaikuta seuraavan tulokseen. Toistojen lukumäärä $n$ on 7 ja haluamme selvittää, milloin näistä $k=2$ onnistuu. 
+							
+Aiemman tehtävän xxxx perusteella onnistumistodennäköisyys $p$ on $\frac13$. Teoreeman 5 avulla saamme
+$$
+\displaystyle\binom{7}{2} \left( \frac13 \right)^2 \left( 1-\frac13 \right)^{7-2} = 21 \cdot \left( \frac13 \right)^2 \cdot \left( \frac23 \right)^5 \approx 24{,}0\ \%.
+$$
+' %}	
+
+{% include box.html  
+type="exercise"
+header="Toistokoe nopalla" 
+content='
+Tavallista noppa heitetään seitsemän kertaa. Laske, millä todennäköisyydellä saadaan 0, 1, 3, 4, 5, 6 ja 7 kertaa silmäluku 5 tai 6. Muodosta tuloksista yhdessä aiemman tehtävän avulla todennäköisyysjakauma.
+'
+dropdown='
+' %}		
+	
+Yleisin toistokokeen todennäköisyyksiin liittyvä laskuvirhe on binomikertoimen unohtaminen.
+
+## Odotusarvo
+	
 ## Tehtäväsarja 2
 
 {% include box.html  
@@ -214,5 +253,5 @@ dropdown='
 Vastauksen sisältö.
 ' %}
 
-##Itsearviointitehtävä
+## Itsearviointitehtävä
 Varmista, että olet oppinut tämän luvun keskeiset asiat tekemällä itsearviointitesti [opetus.tv:n polku-palvelussa](https://polku.opetus.tv/). Samalla harjoittelet omien ratkaisujesi pisteyttämistä pisteytysohjeiden avulla.
