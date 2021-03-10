@@ -71,13 +71,63 @@ Todennäköisyysjakaumasta voidaan määritellä yksittäisten todennäköisyyks
 type="exercise"
 header="Lapsiperheet" 
 content='
-Sisältö
-1. Alatehtävä.
-1. Alatehtävä.
+Alla olevassa taulukossa on esitetty lapsiperheiden lasten lukumäärän jakauma.
+
+| Lasten lkm| $f$ 	| $f$ %	|	 
+| ---		| ---	| ---	|
+| 1			| 241709| 42,7 %|
+| 2			| 220116| 38,9 %|		
+| 3			| 75326	| 13,3 %|
+| 4			| 18409	| 3,3 %	|
+| 5			| 5493	| 1,0 %	|
+| 6			| 2289	| 0,4 %	|
+| 7			| 1235	| 0,2 %	|
+| 8			| 751	| 0,1 %	|
+| 9			| 476	| 0,08 %|
+| 10		| 262	| 0,05 %|
+| 11		| 117	| 0,03 %|
+| 12		| 41	| 0,007 %|
+| 13		| 12	| 0,002 %|
+| 14		| 3		| 0,0005 %|
+| 15		| 0		| 0 %	|
+| 16		| 3		| 0,0005 %|
+| **Yhteensä**	| **566242**| 100 % |
+
+1. Millä todennäköisyydellä lapsiperheessä on enintään kolme lasta?
+1. Millä todennäköisyydellä lapsiperheessä on 3--5 lasta?
+1. Millä todennäköisyydellä satunnaisesti valitussa lapsiperheessä on vähintään 3 lasta?
 '
 dropdown='
-Vastauksen sisältö.
-' %}					
+1. Lapsiperheissä enintään 3 lasta tarkoittaa, että lapsia on 1, 2 tai 3. Kuvaajassa tämä tarkoittaa kolmea vasemmanpuoleista pylvästä. Todennäköisyys saadaan laskemalla yhteen
+$$
+42{,}7\ \% + 38{,}9\ \% + 13{,}3 \% \approx 94{,}9\ \%.
+$$
+1. 3-5 lasta tarkoittaa 3, 4 tai 5 lasta ja sen todennäköisyys on
+$$
+13{,}3\ \% + 3{,}3\ \% + 1{,}0\ \% \approx 18\ \%.
+$$ 
+1. Nyt olemme kiinnostuneita perheistä, joiden lasten lukumäärä on 3, 4, 5,... , 15, 16. Tämä voidaan siis laskea vastaavien suhteellisten frekvessien $f \%$ avulla
+$$
+  13{,}3\ \% + 3{,}3\ \% + \cdots + 0{,}0005\ \%\approx 18{,}4\ \%.
+$$
+Toisaalta voimme hyödyntää tietoa, että kaikkien tapahtumien todennäköisyyksien summa on 100 %. Nyt laskemme ensin todennäköisyyden, että lapsia on 1 tai 2
+$$
+  42{,}7\ \% + 38{,}9\ \% \approx 81{,}6\ \%.
+$$
+Tämän avulla saamme laskettua todennäköisyyden vähintään kolmelle lapselle vähentämällä tämän 100 prosentista eli
+$$
+  100\ \%-81{,}6\ \% = 100\ \% - 81{,}6\ \% = 18{,}4\ \%.
+$$
+' %}		
+
+## Binomijakauma
+Toistokoe on tilanne, jossa sama koe suoritetaan useampaan kertaan ja tapahtumat ovat toisistaan riippumattomia. Lisäksi toistokokeessa on vain kaksi tulosvaihtoehtoa: onnistuminen ja epäonnistuminen. Toistokokeeseen liittyvää todennäköisyyttä kutsutaan *binomitodennäköisyydeksi*.	
+
+Tarkastellaan tilannetta, jossa kokeen onnistumisen todennäköisyys $p$ on $0{,}3$. Jos sama koe toistetaan 5 kertaa, niin mahdollisia kokeiden tuloksien vaihtoehtoja on $2^5=32$.  Erilaisia toistokokeen lopputuloksia on kuusi: 0 onnistumista, 1 onnistuminen,... , 5 onnistumista. Katso alla oleva taulukko:
+![Toistokeen kaikki mahdolliset lopputulokset. Numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista.](/images/noppa_toistokoe.png "Toistokeen kaikki mahdolliset lopputulokset. Numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista.")
+
+Huomataan aluksi, että jokaisessa lopputuloksessa olevien sarakkeiden lukumäärä taulukossa saadaan binomikertoimella. Merkitään, että numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista. Olkoon $A=\{1, 2, \ldots, 5\}$. Valitaan joukosta $A$ $k$ kappaletta alkioita, $k\in[0,5]$. Ajatellaan, että valitut $k$ alkiota kertovat, mihin jonon paikkoihin luku $1$ asetetaan. Loppuihin $5-k$ paikkaan asetetaan luku 0. Tällöin jokainen joukon $A$ $k$-alkioinen osajoukko vastaa yhtä jonoa, jossa on täsmälleen $k$ kappaletta lukuja $1$, ja toisinpäin. Näin ollen jonoja on yhtä paljon kuin $k$-alkioisia osajoukkoja eli $\displaystyle \binom{5}{k}$.
+						
 					
 ## Tehtäväsarja 2
 

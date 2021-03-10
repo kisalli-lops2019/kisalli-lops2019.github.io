@@ -598,7 +598,7 @@ header="Modifioitu noppa"
 content='
 Tutkitaan 6-sivuista noppaa. Neljällä sivulla on kullakin yksi väri: punainen, sininen, keltainen ja vihreä.
 Yhdellä sivulla nopan heittäjä saa valita punaisen ja sinisen välillä, ja yhdellä sivulla nopan heittäjä saa valita kaikista väreistä.
-1. (a) Nopan heittäjä tarvitsee sinisen tai vihreän voittaakseen pelin. Laske todennäköisyys tapahtumalle sininen tai vihreä.
+1. Nopan heittäjä tarvitsee sinisen tai vihreän voittaakseen pelin. Laske todennäköisyys tapahtumalle sininen tai vihreä.
 1. Laske kunkin värin todennäköisyys. Summaa todennäköisyydet yhteen. Mitä havaitset? Mistä tämä johtuu?
 ' 
 dropdown='
