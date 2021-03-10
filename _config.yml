@@ -5,7 +5,7 @@ baseurl:
 resume_site: 
 description: 
 github_username: 
-github: https://github.com/kisalli-lops2019/ 
+github: https://github.com/kisalli-lops2019
 plugins: [jekyll-paginate]
 paginate: 12
 paginate_path: "/page/:num/"
