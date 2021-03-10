@@ -1,6 +1,7 @@
 ---
 layout: module-page
-title: Diskreetti kahden muuttujan jakauma: 4
+title: Diskreetti kahden muuttujan jakauma
+chapter: 4
 module: Tilastot ja todennäköisyys (MAA8)
 ---
 
