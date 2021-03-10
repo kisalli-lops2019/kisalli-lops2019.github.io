@@ -1,7 +1,6 @@
 ---
 layout: module-page
-title: Diskreetti kahden muuttujan jakauma
-chapter: 4
+title: Diskreetti kahden muuttujan jakauma: 4
 module: Tilastot ja todennäköisyys (MAA8)
 ---
 
@@ -37,6 +36,7 @@ content='
 Sisältö
 1. Alatehtävä.
 1. Alatehtävä.
+'
 dropdown='
 Vastauksen sisältö.
 ' %}
@@ -50,6 +50,7 @@ content='
 Sisältö
 1. Alatehtävä.
 1. Alatehtävä.
+'
 dropdown='
 Vastauksen sisältö.
 ' %}
