@@ -127,7 +127,64 @@ Tarkastellaan tilannetta, jossa kokeen onnistumisen todennäköisyys $p$ on $0{,
 ![Toistokeen kaikki mahdolliset lopputulokset. Numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista.](/images/noppa_toistokoe.png "Toistokeen kaikki mahdolliset lopputulokset. Numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista.")
 
 Huomataan aluksi, että jokaisessa lopputuloksessa olevien sarakkeiden lukumäärä taulukossa saadaan binomikertoimella. Merkitään, että numero 1 tarkoittaa kokeen onnistumista ja numero 0 epäonnistumista. Olkoon $A=\{1, 2, \ldots, 5\}$. Valitaan joukosta $A$ $k$ kappaletta alkioita, $k\in[0,5]$. Ajatellaan, että valitut $k$ alkiota kertovat, mihin jonon paikkoihin luku $1$ asetetaan. Loppuihin $5-k$ paikkaan asetetaan luku 0. Tällöin jokainen joukon $A$ $k$-alkioinen osajoukko vastaa yhtä jonoa, jossa on täsmälleen $k$ kappaletta lukuja $1$, ja toisinpäin. Näin ollen jonoja on yhtä paljon kuin $k$-alkioisia osajoukkoja eli $\displaystyle \binom{5}{k}$.
-						
+
+| Onnistumisia kpl	| Sarakkeiden lukumäärä	|
+| --- 				| ---					|
+| 0					| $\displaystyle \binom{5}{0}=1$	|
+| 1					| $\displaystyle \binom{5}{1}=5$	|
+| 2					| $\displaystyle \binom{5}{2}=10$	|
+| 3					| $\displaystyle \binom{5}{3}=10$	|
+| 4					| $\displaystyle\binom{5}{4}=5$		|
+| 5					| $\displaystyle\binom{5}{5}=1$		|
+
+Seuraavaksi huomataan, että jos yhden kokeen onnistumisen todennäköisyys on $0{,}3$, niin epäonnistumisen todennäköisyys on $1-0{,}3 = 0{,}7$.
+
+Seuraavaksi selvitämme kunkin mahdollisen lopputuloksen todennäköisyydet. Aloitetaan lopputuloksesta, jossa kaikki kokeet epäonnistuivat. Tämä saadaan ainoastaan, kun jokainen koe epäonnistuu eli todennäköisyys on siis
+$$
+0{,}7 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 =  0{,}7^5 = 0{,}16807 \approx 16{,}8\ \% .
+$$
+Tarkastellaan seuraavaksi lopputulosta, jossa 1 koe onnistuu ja 4 epäonnistuu. Nyt onnistunut koe voi olla mikä tahansa 5 kokeesta, joten lopputulos voidaan saada 5 eri tavalla. Jos ensimmäinen koe onnistuu ja muut 4 eivät, niin todennäköisyys on
+$$
+   0.3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 0{,}07203 \approx 7{,}2\ \% .
+$$
+Jos toinen koe onnistuu, niin
+$$
+   0.7 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 0{,}07203 \approx 7{,}2\ \% .
+$$
+Vastaavasti 3, 4 ja 5 kokeen onnistumisille saadaan todennäköisyys $0{,}07203 \approx 7{,}2 \%$. Koska kaikkien viiden tapahtuman todennäköisyys on sama, niin lopputuloksen todennäköisyydeksi saadaan
+$$
+   5 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 5 \cdot 0{,}3 \cdot 0{,}7^4  =0{,}36015 \approx 36{,}0\ \% .
+$$
+Kolmantena lopputuloksena on 2 onnistunutta koetta ja 3 epäonnistunutta. Erilaisten kombinaatioiden lukumäärä saadaan binomikertoimen avulla $\displaystyle\binom{5}{2} = \frac{5!}{2! 3!} = 10$, joten erilaisia vaihtoehtoja on 10 kappaletta. Jokaisen näiden todennäköisyys on
+$$
+   0{,}3 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 0{,}3^2 \cdot 0{,}7^3=0{,}03087 \approx 3{,}1\ \% .
+$$
+Lopputulukosen todennäköisyys on
+$$
+   10 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 \cdot 0{,}7 = 10 \cdot 0{,}3^2 \cdot 0{,}7^3 = 0{,}3087 \approx 30{,}9\ \% .
+$$
+Seuraava lopputulos on 3 onnistunutta koetta ja 2 epäonnistunutta. Binomikertoimen avulla saamme, että eri kombinaatioita on $\displaystyle\binom{5}{3} = 10$. Jokaisen näiden todennäköisyys on
+$$
+   0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 = 0{,}3^3 \cdot 0{,}7^2= 0{,}01323 \approx 1{,}3\ \% 
+$$
+joten lopputuloksen todennäköisyys on
+$$
+   10 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 \cdot 0{,}7 = 10 \cdot 0{,}3^3 \cdot 0{,}7^2 =0{,}1323 \approx 13{,}2\ \% .
+$$
+Lopputuloksen 4 onnistunutta ja 1 epäonnistunut erilaisia vaihtoehtoja on 5, joista jokaisen todennäköisyys on
+$$
+   0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 = 0{,}3^4 \cdot 0{,}7=0{,}00567 \approx 0{,}6\ \% .
+$$
+Lopputuloksen todennäköisyys on
+$$
+   5 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}7 = 5 \cdot 0{,}3^4 \cdot 0{,}7=0{,}02835 \approx 2{,}8\ \% .
+$$
+Lopputulos 5 onnistunutta voidaan saada vain yhdellä tavalla ja sen todennäköisyys on
+$$
+   0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 \cdot 0{,}3 =0{,}3^5 \approx 0{,}00243\ \% .
+$$
+Voimme seuraavaksi muotoilla yleisen lausekkeen toistokokeen onnistumistodennäköisyydelle.
+					
 					
 ## Tehtäväsarja 2
 
