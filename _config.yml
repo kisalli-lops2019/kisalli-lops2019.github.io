@@ -1,11 +1,11 @@
 name: 
 author: 
-url: https://ruumis.github.io
+url: https://kisalli-lops2019.github.io
 baseurl: 
 resume_site: 
 description: 
 github_username: 
-github: https://github.com/kisallioppiminen/ 
+github: https://github.com/kisalli-lops2019/ 
 plugins: [jekyll-paginate]
 paginate: 12
 paginate_path: "/page/:num/"
