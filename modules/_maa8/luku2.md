@@ -20,9 +20,10 @@ Tämän luvun tavoitteena on, että pystyt xxxx. Osaat
 
 ## Joukko-opin merkintöjä
  Määritellään käsitteet joukko ja jono sekä tutustutaan niihin liittyviin merkintöihin. *Joukko* tarkoittaa kokoelmaa *alkioita*. Lisäksi oletetaan, että jokaisen alkion osalta on yksikäsitteisesti pääteltävissä, kuuluuko se joukkoon vai ei. Joukkoja merkitään yleensä isoilla kirjaimilla. Jos joukko $A$ sisältää täsmälleen alkiot $1$, $2$ ja $3$, niin kirjoitamme $A={1, 2, 3}$. Joukon merkinnässä alkiot voivat olla missä järjestyksessä tahansa. Symbolilla $\in$ merkitään, että alkio kuuluu joukkoon, esim.\ $2 \in A$. Joukot ovat samoja, jos niissä on samat alkiot, tämä merkitään yhtäsuuruudella. Joukon merkinnässä sama alkio voi esiintyä useamman kerran, näin esimerkiksi $\{1, 2, 3\}= \{1, 3, 2, 3, 1\}$. Jos joukon määrittelee jokin ehto $P$, niin joukko voidaan kirjoittaa  muodossa $\{x \colon x \text{ toteutaa ehdon } P\}$. Esimerkiksi parilliset luonnolliset luvut voidaan kirjoittaa muodossa $\{ n \in \mathbb{N} \colon \frac{n}2 \in \mathbb{N}\}$, eli otamme joukkoon kaikki ne luonnolliset luvut, joilla on se ominaisuus, että luku jaettuna kahdella on luonnollinen luku. Jos joukon alkiot määrää jokin lauseke, niin joukko voidaan ilmoittaa tämän lausekkeen avulla, esimerkiksi $\{2n\colon n=1, 2, 3\} =\{2, 4, 6\}$. 
- * Sanomme, että joukko $A$ on joukon $B$ *osajoukko*, jos jokainen joukon $A$ alkio kuuluu joukkoon $B$. Merkitsemme tällöin $A \subset B$. Esimerkiksi $\left{2, 4\right} \subset \{ n \in \mathbb{N} \colon \frac{n}2 \in \mathbb{N}\}$. Huomaa, että jokainen joukko on itsensä osajoukko. 
- * *Tyhjää joukkoa*, jossa ei ole lainkaan alkioita, merkitään $\emptyset$.
-* *Jonolla* tarkoitetaan äärellistä tai ääretöntä määrää alkioita, joille on annettu järjestys. Jonossa sama alkio voi esiintyä useamman kerran eri paikassa. Jonoa merkitään kaarisuluilla, jonka sisään alkiot merkitään järjestyksessä, esim. $(1, 3, 2, 1)$ on 4-alkioinen jono. Joukko ja jono ovat eri käsitteitä. Ajatellaan lukuja 1, 2 ja 3. Niistä voidaan kaikki luvut mukaan ottamalla muodostaa vain yksi joukko $\{1, 2, 3\}$, mutta kuusi erilaista kolmen mittaista jonoa: $(1, 2, 3)$, $(1, 3, 2))$, $(3, 1, 2)$, $(3, 2, 1)$,  $(2, 1, 3)$ ja $(2, 3, 1)$. Jonossa jokaisella alkiolla on paikka toisin kuin joukossa. 
+
+Sanotaan, että joukko $A$ on joukon $B$ *osajoukko*, jos jokainen joukon $A$ alkio kuuluu joukkoon $B$. Tällöin merkitään $A \subset B$. Esimerkiksi $\{2, 4\} \subset \{ n \in \mathbb{N} \colon \frac{n}2 \in \mathbb{N}\}$. Huomaa, että jokainen joukko on itsensä osajoukko. *Tyhjää joukkoa*, jossa ei ole lainkaan alkioita, merkitään $\emptyset$.
+
+*Jonolla* tarkoitetaan äärellistä tai ääretöntä määrää alkioita, joille on annettu järjestys. Jonossa sama alkio voi esiintyä useamman kerran eri paikassa. Jonoa merkitään kaarisuluilla, jonka sisään alkiot merkitään järjestyksessä, esim. $(1, 3, 2, 1)$ on 4-alkioinen jono. Joukko ja jono ovat eri käsitteitä. Ajatellaan lukuja 1, 2 ja 3. Niistä voidaan kaikki luvut mukaanottamalla muodostaa vain yksi joukko $\{1, 2, 3\}$, mutta kuusi erilaista kolmen mittaista jonoa: $(1, 2, 3)$, $(1, 3, 2))$, $(3, 1, 2)$, $(3, 2, 1)$,  $(2, 1, 3)$ ja $(2, 3, 1)$. Jonossa jokaisella alkiolla on paikka toisin kuin joukossa. 
              				
 {% include box.html  
 type="exercise"
@@ -34,9 +35,9 @@ content="
 
 ## Klassinen todennäköisyys
 
-Klassinen todennäköisyys perustuu *symmetrisiin alkeistapauksiin*.	Tarkoitamme tällä, että lähtötilanteesta voi sattuman takia päätyä useampaan tulokseen, joista mihin tahansa päätyminen on yhtä todennäköistä. Kaikkien mahdollisten tulosten joukkoa kutsutaan *perusjoukoksi*. Heitetään noppaa yhden kerran. Ennen heittoa emme tiedä nopanheiton tulosta. Tiedämme kuitenkin, että tuloksena on jokin luku perusjoukosta $\{1, 2, 3, 4, 5, 6\}$. Tässä jokainen silmäluku on alkeistapaus ja ne ovat yhtä todennäköisiä. 
+Klassinen todennäköisyys perustuu *symmetrisiin alkeistapauksiin*. Tällä tarkoitetaan, että lähtötilanteesta voi sattuman takia päätyä useampaan tulokseen, ja jokainen tulos on yhtä todennäköinen. Kaikkien mahdollisten tulosten joukkoa kutsutaan *perusjoukoksi*. Heitetään noppaa yhden kerran. Ennen heittoa ei tiedetä nopanheiton tulosta. Tiedetään kuitenkin, että tuloksena on jokin luku perusjoukosta $\{1, 2, 3, 4, 5, 6\}$. Tässä jokainen silmäluku on alkeistapaus ja ne ovat yhtä todennäköisiä. 
 
-*Tapahtumat* ovat perusjoukon osajoukkoja. Seuraavassa tehtävässä on nopanheiton perusjoukko $\{ 1, 2, 3, 4, 5, 6\}$ ja sen osajoukko $\{5, 6\}$, joka vastaa tapahtumaa "tuloksena on viisi tai kuusi".
+*Tapahtumat* ovat perusjoukon osajoukkoja. Yhden nopan heitossa perusjoukko on $\{ 1, 2, 3, 4, 5, 6\}$ ja sen eräs osajoukko on $\{5, 6\}$, joka vastaa tapahtumaa "tuloksena on viisi tai kuusi".
 
 {% include box.html  
 type="definition"
@@ -53,16 +54,19 @@ missä $n(A)$ on tapahtuman $A$ alkioiden eli \"suotuisten alkeistapausten\" luk
 type="exercise"
 header="Yhden nopan heitto" 
 content="
-Tarkastellaan yhden nopan heittoa, jolloin perusjoukkona on nopanheiton mahdolliset tulokset $E=\{1,2,3,4,5,6\}$. Laske todennäköisyys sille, että tuloksena on viitonen tai kuutonen.
+Heitetään noppaa kerran. Tehtävänä on laskea todennäköisyys saada enintään silmäluku 4.
+1. Määritä perusjoukko $E$. Kuinka monta alkiota joukossa on?
+1. Mitkä perusjoukon alkioista vastaavat tapahtumaa $Saadaan enintään silmäluku 4.$, eli mikä on $A$? Kuinka monta alkiota joukossa on?
+1. Laske todennäköisyys $P(A)$.
 " 
 dropdown="
-Lasketaan todennäköisyys sille, että tuloksena on viitonen tai kuutonen. Tätä varten merkitään $A=\{5,6\}$, jonka todennäköisyys on
+TÄMÄ UUSIKSI Lasketaan todennäköisyys sille, että tuloksena on viitonen tai kuutonen. Tätä varten merkitään $A=\{5,6\}$, jonka todennäköisyys on
 $$
 P(A)=\frac{n(A)}{n(E)}=\frac{2}{6}=\frac{1}{3}.
 $$
 " %}
 
-Tapahtumien todennäköisyydet on tapana ilmoittaa murtolukuina (tarkkoina arvoina), desimaalilukuina esim. kahden merkitsevän numeron tarkkuudella tai prosentteina. Edellisen esimerkin vastauksen voi siis esittää $\frac{1}{3}$, $0{,}33$ tai $33\ \%$.
+Tapahtumien todennäköisyydet on tapana ilmoittaa murtolukuina (tarkkoina arvoina), desimaalilukuina esim. kahden merkitsevän numeron tarkkuudella tai prosentteina. Edellisen esimerkin vastauksen voi siis esittää $\frac{2}{3}$, $0{,}67$ tai $67\ \%$.
 					
 {% include box.html  
 type="exercise"
