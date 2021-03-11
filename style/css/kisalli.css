@@ -175,8 +175,8 @@ details > summary h2,
 	color: white;
 }
 
-details > summary h2,
-.collapsible:after {
+details > summary h2::after,
+.collapsible::after {
 	content: '\02795'; /* Unicode character for "plus" sign (+) */
 	font-size: 13px;
 	color: white;
@@ -184,8 +184,8 @@ details > summary h2,
 	margin-left: 5px;
 }
 
-details > summary h2,
-.active:after {
+details > summary h2::after,
+.active::after {
 	content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
