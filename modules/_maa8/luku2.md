@@ -59,7 +59,7 @@ header="Yhden nopan heitto"
 content="
 Heitetään noppaa kerran. Tehtävänä on laskea todennäköisyys saada nopanheitossa enintään silmäluku 4.
 1. Määritä perusjoukko $E$. Kuinka monta alkiota joukossa on, eli mikä on kaikkien alkeistapausten lukumäärä $n(E)$?
-1. Mitkä perusjoukon alkioista vastaavat tapahtumaa $Saadaan enintään silmäluku 4$, eli mikä on $A$? Kuinka monta alkiota joukossa on, eli mikä on suotuisten alkeistapausten lukumäärä $n(A)$?
+1. Mitkä perusjoukon alkioista vastaavat tapahtumaa "Saadaan enintään silmäluku 4", eli mikä on $A$? Kuinka monta alkiota joukossa on, eli mikä on suotuisten alkeistapausten lukumäärä $n(A)$?
 1. Laske todennäköisyys $P(A)$.
 " 
 dropdown="
