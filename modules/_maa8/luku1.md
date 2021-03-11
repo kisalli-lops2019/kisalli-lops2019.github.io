@@ -530,7 +530,7 @@ Suomessa on yhteensä 311 kuntaa. Asukasluvultaan suurin on Helsinki \(635181 as
 
 [Kuntaliiton verkkosivujen](https://www.kuntaliitto.fi/vaestotietoja-kunnittain) \(luettu 21.10.2020\) kuvassa kunnat, eli havaintoyksiköt, on luokiteltu asukasmäärän, eli havaintoarvon, mukaan viiteen eri luokkaan.
 
-![Kuntaliiton verkkosivujen kuva Suomen kunnista](images/kunta.png "Suomen kunnat")
+![Kuntaliiton verkkosivujen kuva Suomen kunnista](/images/kunta.png "Suomen kunnat")
 
 1. Miten asukasmäärät on luokiteltu?
 1. Mitä tarkoittavat kuvan luvut 21, 34, 43, 80 ja 133?

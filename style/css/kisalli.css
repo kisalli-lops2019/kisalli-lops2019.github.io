@@ -44,6 +44,7 @@ body.bg-grey,
 	margin: -15px;
 }
 
+details > summary h2,
 .box-button {
 	background-color: #ebebeb;
 	color: #313131;
@@ -98,13 +99,14 @@ body.bg-grey,
 }
 
 /* Style the button that is used to open and close the collapsible content */
+details > summary h2, 
 .collapsible {
       cursor: pointer;
 }
 
 
 .box-dropdown-button {
-  background-color: background-color:rgba(0, 0, 0, 0.2);
+  background-color: white;
   color: black;
   padding: 18px;
   width: 100%;
