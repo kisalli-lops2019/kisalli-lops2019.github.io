@@ -44,7 +44,20 @@ body.bg-grey,
 	margin: -15px;
 }
 
-details > summary h2,
+details > summary h2 {
+	background-color: #ebebeb;
+	color: #313131;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 .box-button {
 	background-color: #ebebeb;
 	color: #313131;
