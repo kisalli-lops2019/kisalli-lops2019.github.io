@@ -10,7 +10,7 @@ module: Tilastot ja todennäköisyys (MAA8)
 
 
 <details markdown="1">
-  <summary>
+  <summary markdown="1">
 ## Luvun tavoitteet
   </summary>
 Tämän luvun tavoitteena on, että pystyt xxxx. Osaat
