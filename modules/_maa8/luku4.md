@@ -9,7 +9,7 @@ module: Tilastot ja todennäköisyys (MAA8)
 {:toc}
 
 
-<details>
+<details markdown="1">
   <summary>
 ## Luvun tavoitteet
   </summary>
