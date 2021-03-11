@@ -184,7 +184,7 @@ details > summary h2::after,
 	margin-left: 5px;
 }
 
-details > summary h2::after,
+details[open] > summary h2::after,
 .active::after {
 	content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
