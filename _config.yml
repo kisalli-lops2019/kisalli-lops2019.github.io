@@ -23,6 +23,10 @@ comments :
     owner : 
     admin : 
 collections:
+  may1:
+    order: chapter
+    output: true
+    permalink: /:collection/:name
   maa7:
     order: chapter
     output: true
